@@ -192,12 +192,11 @@
                 $.each(entries, function (index, value) {
                     var title = value.snippet.title;
                     var video = value.id.videoId;
-                    html += '<h3><strong>' + title + '</strong></h3><br>';
-                    html += '<iframe width="500" height="400" src="https://www.youtube.com/embed/' + video + '" allowfullscreen>';
-                    console.log(results);
+                    $('#search-results').prepend('<h3><strong>' + title + 
+                    '<iframe width="500" height="400" src="https://www.youtube.com/embed/' 
+                    + video + '" allowfullscreen>' + '</strong></h3>');
                 });
 
-                $('#search-results').html(html);
             }
 
             var config = {
